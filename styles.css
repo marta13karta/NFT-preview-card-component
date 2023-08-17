@@ -1,0 +1,133 @@
+/* Reset some default browser styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color */
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+/* Card styling */
+.nft-card {
+  position: absolute;
+  top: 150px;
+  left: 600px;
+  background-color: hsl(216, 50%, 16%);
+  width: 300px;
+  height: 510px;
+  border-radius: 4%;
+  box-shadow: 15px 25px 25px 4px hsl(218, 86%, 8%);
+}
+
+/* General text styles */
+h4,
+.nft-title,
+.nft-description,
+.nft-time-text {
+  position: relative;
+  left: 22.5px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+/* Image styling */
+.nft-card img {
+  position: relative;
+  width: 255px;
+  height: 255px;
+  border-radius: 4%;
+}
+
+/* Text color for title and artist name */
+.artist-name,
+.nft-title {
+  color: white;
+}
+
+/* Text color and line height for various elements */
+.nft-time-left,
+.nft-description,
+.nft-creator,
+.nft-time-text {
+  color: hsl(215, 51%, 70%);
+  line-height: 1.5;
+}
+
+/* Price styling */
+.nft-price {
+  font-family: "Outfit", sans-serif;
+  color: hsl(178, 100%, 50%);
+  position: relative;
+  top: 35px;
+  left: 22.5px;
+  font-weight: 400;
+}
+
+/* Title font weight and size */
+.nft-title {
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  top: 40px;
+}
+
+/* Avatar image styling */
+#avatar img {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/* Attribution footer */
+.attribution {
+  position: absolute;
+  top: 800px;
+  color: white;
+}
+
+/* Horizontal rule styling */
+.custom-hr {
+  position: relative;
+  top: 34px;
+  margin: 20px;
+  height: 0.5px;
+  border: none;
+  box-shadow: 0 0.2px 0 hsl(215, 51%, 70%);
+}
+
+/* Clock icon styling */
+#clock-icon img {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  position: relative;
+  top: 37px;
+  left: 90px;
+}
+
+.main-img {
+  position: relative;
+  top: 22.5px;
+  left: 22.5px;
+}
+.nft-description {
+  position: relative;
+  top: 30px;
+}
+.nft-time-text {
+  position: relative;
+  left: 95px;
+  top: 35px;
+}
+.icon-ethereum {
+  position: relative;
+  top: 4px;
+}

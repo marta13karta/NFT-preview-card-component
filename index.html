@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <title>Frontend Mentor | NFT preview card component</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div class="nft-card">
-    <img class="main-img" src="images/image-equilibrium.jpg" alt="Equilibrium NFT" />
-    <h4 class="nft-title">Equilibrium #3429</h4>
-    <p class="nft-description">
-      Our Equilibrium collection promotes balance and calm.
-    </p>
-    <p>
-      <div class="container-price-time">
-        <span class="nft-price">
-          <span class="icon-container">
-            <object class="icon-ethereum" data="./images/icon-ethereum.svg" alt="icon-ethereum"></object>
-          </span>
-          0.041 ETH
-        </span>
-        <span class="nft-time-left">
-          <span id="clock-icon">
-            <img src="images/icon-clock.svg" alt="clock icon" />
-          </span>
-          <span class="nft-time-text">3 days left</span>
-        </span>
-      </div>
-    </p>
-    <hr class="custom-hr" />
-    <p class="nft-creator">
-      <span id="avatar">
-        <img src="./images/image-avatar.png" alt="avatar" />
-      </span>
-      Creation of <span class="artist-name">Jules Wyvern</span>
-    </p>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="nft-card">
+        <div class="main-img-container">
+          <img
+            class="main-img"
+            src="images/image-equilibrium.jpg"
+            alt="Equilibrium NFT"
+          />
+          <img class="hover-img" src="images/icon-view.svg" />
+          <div class="overlay"></div>
+        </div>
 
-  <div class="attribution">
-    <footer>
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
-      >. Coded by <a href="#">Marta Zagirova</a>.
-    </footer>
-  </div>
-</body>
+        <div class="nft-content">
+          <h3 class="nft-title">Equilibrium #3429</h3>
+          <p class="nft-description">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="nft-details">
+            <div>
+              <img
+                class="icon-ethereum"
+                src="./images/icon-ethereum.svg"
+                alt="icon-ethereum"
+              /><span class="eth">0.041 ETH</span>
+            </div>
+            <div>
+              <img
+                class="clock-img"
+                src="images/icon-clock.svg"
+                alt="clock icon"
+              />
+              <span class="time">3 days left</span>
+            </div>
+          </div>
+        </div>
+        <hr class="custom-hr" />
+        <div class="creator-info">
+          <p class="nft-creator">
+            <span id="avatar">
+              <img src="./images/image-avatar.png" alt="avatar" />
+            </span>
+            Creation of <span class="artist-name"> Jules Wyvern</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      <footer>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Marta Zagirova</a>.
+      </footer>
+    </div>
+  </body>
 </html>

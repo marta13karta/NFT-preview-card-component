@@ -1,45 +1,47 @@
-/* Reset some default browser styles */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Set background color */
 body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(217, 54%, 11%);
+}
+.card-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+/* Image styling */
+.main-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Add a transition for smooth effect */
 }
 
 /* Card styling */
 .nft-card {
-  position: absolute;
-  top: 150px;
-  left: 600px;
+  padding: 22.5px;
   background-color: hsl(216, 50%, 16%);
   width: 300px;
-  height: 510px;
-  border-radius: 4%;
+  border-radius: 0.8rem;
   box-shadow: 15px 25px 25px 4px hsl(218, 86%, 8%);
 }
 
-/* General text styles */
-h4,
-.nft-title,
-.nft-description,
-.nft-time-text {
-  position: relative;
-  left: 22.5px;
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  margin-top: 0;
-}
-
-/* Image styling */
-.nft-card img {
-  position: relative;
-  width: 255px;
-  height: 255px;
-  border-radius: 4%;
+.nft-description {
+  margin-bottom: 15px;
 }
 
 /* Text color for title and artist name */
@@ -49,85 +51,118 @@ h4,
 }
 
 /* Text color and line height for various elements */
-.nft-time-left,
 .nft-description,
 .nft-creator,
-.nft-time-text {
+.time {
   color: hsl(215, 51%, 70%);
   line-height: 1.5;
-}
-
-/* Price styling */
-.nft-price {
-  font-family: "Outfit", sans-serif;
-  color: hsl(178, 100%, 50%);
-  position: relative;
-  top: 35px;
-  left: 22.5px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Title font weight and size */
 .nft-title {
   font-weight: 600;
   font-size: 18px;
-  position: relative;
-  top: 40px;
+  margin-bottom: 15px;
 }
 
 /* Avatar image styling */
 #avatar img {
-  position: relative;
-  top: 30px;
-  left: 40px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  width: 1.7rem;
+  height: auto;
   border: 1px solid white;
-}
-
-/* Attribution footer */
-.attribution {
-  position: absolute;
-  top: 800px;
-  color: white;
+  border-radius: 0.9rem;
+  margin-right: 10px;
 }
 
 /* Horizontal rule styling */
 .custom-hr {
-  position: relative;
-  top: 34px;
-  margin: 20px;
+  margin-bottom: 1rem;
   height: 0.5px;
   border: none;
   box-shadow: 0 0.2px 0 hsl(215, 51%, 70%);
 }
 
-/* Clock icon styling */
-#clock-icon img {
-  width: 15px;
-  height: 15px;
-  overflow: hidden;
-  position: relative;
-  top: 37px;
-  left: 90px;
+.nft-content {
+  display: flex;
+  flex-direction: column;
+}
+.nft-details {
+  display: flex;
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+  font-size: 14px;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.main-img {
-  position: relative;
-  top: 22.5px;
-  left: 22.5px;
+.creator-info {
+  display: flex;
 }
 .nft-description {
-  position: relative;
-  top: 30px;
+  font-size: 16px;
 }
-.nft-time-text {
-  position: relative;
-  left: 95px;
-  top: 35px;
+
+.nft-creator {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.icon-ethereum {
+
+@media (max-width: 375px) {
+  /* Add any mobile-specific styles here if needed */
+}
+
+.nft-details > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.artist-name {
+  margin-left: 4px;
+}
+
+.icon-ethereum,
+.clock-img {
+  margin-right: 7px;
+}
+
+.artist-name:hover,
+.nft-title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.main-img-container {
   position: relative;
-  top: 4px;
+  display: inline-block;
+}
+
+.hover-img {
+  position: absolute;
+  left: 106px;
+  top: 108px;
+  width: 17%;
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Add a transition for smooth effect */
+}
+.main-img-container:hover .hover-img {
+  opacity: 1;
+  z-index: 1; /* Change this value to adjust the opacity on hover */
+}
+
+.overlay {
+  width: 100%;
+  height: 93%;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+}
+
+.main-img-container:hover .overlay {
+  opacity: 0.5;
 }
